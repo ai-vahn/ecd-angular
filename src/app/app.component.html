@@ -1,0 +1,39 @@
+<main name="{{ name }}"></main>
+
+<form>
+  <div class="imgcontainer">
+    <img
+      src="https://pbs.twimg.com/profile_images/1349272789908381697/6KoNWgX8_400x400.jpg"
+      alt="Avatar"
+      class="avatar"
+    />
+  </div>
+
+  <div class="container">
+    <uname></uname>
+    <input
+      type="text"
+      placeholder="Unesite Username"
+      name="username"
+      [(ngModel)]="username"
+      required
+    />
+    <label for="psw"><b>Password</b></label>
+    <input
+      type="password"
+      placeholder="Unesite Sifru"
+      name="password"
+      [(ngModel)]="password"
+      required
+    />
+
+    <button type="submit" (click)="LogInUser()">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember" /> Zapamti me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <span class="psw">Zaboravljena <a href="#">lozinka?</a></span>
+  </div>
+</form>
